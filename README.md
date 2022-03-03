@@ -46,7 +46,7 @@ helm upgrade --install traefik -f values.yaml traefik/traefik -n traefik
 * Explore Traefik dashboard by creating port forwarding to Traefik's pod by running the following command:
 
 ```
-kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traefik" --output=name) 9000:9000
+kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traefik" -n traefik --output=name) -n traefik 9000:9000
 ```
 
 ## Deploying sample applications
