@@ -49,7 +49,7 @@ helm upgrade --install traefik -f values.yaml traefik/traefik -n traefik
 kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traefik" -n traefik --output=name) -n traefik 9000:9000
 ```
 
-* Launch Traefik Dashboard at [http://localhost:9000/dashboard/#/](http://localhost:9000/dashboard/#/)
+* Traefik Dashboard can be launched at [http://localhost:9000/dashboard/#/](http://localhost:9000/dashboard/#/)
 
 ## Deploying sample applications
 
